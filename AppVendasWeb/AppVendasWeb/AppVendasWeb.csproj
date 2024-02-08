@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\ItensDaVenda\Create.cshtml" />
+    <None Include="Views\ItensDaVenda\Delete.cshtml" />
+    <None Include="Views\ItensDaVenda\Details.cshtml" />
+    <None Include="Views\ItensDaVenda\Edit.cshtml" />
+    <None Include="Views\ItensDaVenda\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.2" />
     <PackageReference Include="BootstrapIcons.AspNetCore" Version="1.11.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.1" />
