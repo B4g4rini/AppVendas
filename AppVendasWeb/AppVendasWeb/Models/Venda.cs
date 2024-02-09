@@ -17,8 +17,7 @@ namespace AppVendasWeb.Models
         public int NotaFiscal { get; set; }
 
         [Display(Name = "Cliente")]
-
-        public Guid ClientId { get; set; }
+        public Guid ClienteId { get; set; }
         public Cliente? Cliente { get; set; }
 
 

@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<AppVendasWeb.Models.ItemDaVenda>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Itens da Venda";
 }
 
-<h1>Index</h1>
+<h1 class="display-5 text-light my-5">Itens da Venda</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-lg btn-outline-light d-inline-flex align-items-center"> <svg class="me-2" bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar"></svg>Adicionar</a>
 </p>
-<table class="table">
+<table class="table table-dark table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -42,10 +42,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Valor)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ItemDaVendaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ItemDaVendaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ItemDaVendaId">Delete</a>
+            <td class="text-end">
+                    <a class="text-decoration-none link-light" asp-action="Edit" asp-route-id="@item.ItemDaVendaId">
+                        <svg class="mx-2" bootstrap-icon="PencilFill" width="16" height="16" aria-label="Adicionar"></svg>
+                    </a> |
+                    <a class="text-decoration-none link-light" asp-action="Details" asp-route-id="@item.ItemDaVendaId">
+                        <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Adicionar"></svg>
+                    </a> |
+                    <a class="text-decoration-none link-light" asp-action="Delete" asp-route-id="@item.ItemDaVendaId">
+                        <svg class="mx-2" bootstrap-icon="Trash" width="16" height="16" aria-label="Adicionar"></svg>
+                    </a>
             </td>
         </tr>
 }
