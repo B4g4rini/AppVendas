@@ -28,32 +28,40 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Produto.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Venda.VendaId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td class="text-end">
-                    <a class="text-decoration-none link-light" asp-action="Edit" asp-route-id="@item.ItemDaVendaId">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produto.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Venda.VendaId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td class="text-end">
+                    <a class="text-decoration-none link-info" asp-action="Edit" asp-route-id="@item.ItemDaVendaId">
                         <svg class="mx-2" bootstrap-icon="PencilFill" width="16" height="16" aria-label="Adicionar"></svg>
+
                     </a> |
-                    <a class="text-decoration-none link-light" asp-action="Details" asp-route-id="@item.ItemDaVendaId">
+
+
+                    <a class="text-decoration-none link-warning" asp-action="Details" asp-route-id="@item.ItemDaVendaId">
                         <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Adicionar"></svg>
+
                     </a> |
-                    <a class="text-decoration-none link-light" asp-action="Delete" asp-route-id="@item.ItemDaVendaId">
+
+
+
+                    <a class="text-decoration-none link-danger" asp-action="Delete" asp-route-id="@item.ItemDaVendaId">
                         <svg class="mx-2" bootstrap-icon="Trash" width="16" height="16" aria-label="Adicionar"></svg>
                     </a>
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
