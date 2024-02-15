@@ -9,7 +9,19 @@
 <p>
     <a asp-action="Create" class="btn btn-lg btn-outline-light d-inline-flex align-items-center"> <svg class="me-2" bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar"></svg>Adicionar</a>
 </p>
-<table class="table table-dark table-striped table-hover" >
+<div>
+    <form method="post" asp-action="Search">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchString"
+                   placeholder="Pesquisar por produto" aria-label="Pesquisar por produto"
+                   aria-describedby="button-addon2">
+            <button class="btn btn-outline-light" type="submit" id="button-addon2">
+                <svg bootstrap-icon="Search" width="16" height="16" aria-label="Pesquisar"></svg>
+            </button>
+        </div>
+    </form>
+</div>
+<table class="table table-dark table-striped table-hover">
     <thead>
         <tr>
             <th>
